@@ -29,12 +29,12 @@
 
 // In this section we define map dimmensions, initial and authomatic ending conditions, etc.
 
-#define MAP_W					15		//
-#define MAP_H					2		// Map dimmensions in screens
+#define MAP_W					5		//
+#define MAP_H					6		// Map dimmensions in screens
 //#define ENABLE_CUSTOM_CONNECTIONS 	// Custom connections array. MAP_W/MAP_H just define how many screens
-#define SCR_INI					7		//  Initial screen
-#define PLAYER_INI_X			7		//
-#define PLAYER_INI_Y			6		// Initial tile coordinates
+#define SCR_INI					25		//  Initial screen
+#define PLAYER_INI_X			1		//
+#define PLAYER_INI_Y			7		// Initial tile coordinates
 //#define SCR_END 				99		// Last screen. 99 = deactivated.
 //#define PLAYER_END_X			99		//
 //#define PLAYER_END_Y			99		// Player tile coordinates to finish game
@@ -165,7 +165,7 @@
 
 //#define USE_TWO_BUTTONS 				// Alternate keyboard scheme for two-buttons games
 //#define USE_HOTSPOTS_TYPE_3 			// Alternate logic for recharges.
-#define TILE_GET				13		// If defined, player can "get" tile #
+#define TILE_GET				45		// If defined, player can "get" tile #
 #define TILE_GET_FLAG 			1		// And this increments flag #
 #define TILE_GET_SCRIPT					// Run PLAYER_GETS_COIN when player gets tile TILE_GET
 //#define DIE_AND_RESPAWN				// If defined, dying = respawn on latest safe.
@@ -270,7 +270,7 @@
 
 // Kill slowly (Ramiro)
 // --------------------
-//#define ENABLE_KILL_SLOWLY			// Beh 3 kills slowly
+#define ENABLE_KILL_SLOWLY			// Beh 3 kills slowly
 #define KILL_SLOWLY_ON_FLAG		30 		// If defined, flag controls behaviour. If 0,beh 1.
 #define KILL_SLOWLY_GAUGE		32 		// # of ticks before kill
 #define KILL_SLOWLY_FRAMES		8 		// # of frames per tick
@@ -547,9 +547,9 @@
 
 #ifndef COMPRESSED_LEVELS
 unsigned char behs [] = {
-	0, 3, 3, 3, 3, 3, 8, 8, 8, 8, 4, 3, 3, 0, 3, 4,
-	8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 0, 0, 0, 0,
-	0, 0, 8, 8, 1, 0, 0, 8, 8, 8, 4, 0, 0, 0, 0, 4
+	0, 3, 3, 3, 3, 3, 8, 8, 4, 4, 3, 8, 8, 8, 0, 3,
+	8, 0, 0, 0, 0, 8, 8, 8, 8, 0, 0, 0, 0, 0, 8, 8,
+	0, 0, 4, 1, 0, 0, 8, 8, 4, 8, 4, 0, 0, 0, 0, 0
 };
 #endif
 
