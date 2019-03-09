@@ -2,7 +2,7 @@
 
 rem set here the game name (used in filenames)
 
-SET game=game
+SET game=firulitoycalcetos
 
 echo ------------------------------------------------------------------------------
 echo    BUILDING %game%
