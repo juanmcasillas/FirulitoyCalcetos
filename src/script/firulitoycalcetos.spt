@@ -478,8 +478,9 @@ PRESS_FIRE AT SCREEN 25
 	IF $FIRST_TIME = 0
 	THEN
 		SET $FIRST_TIME = 1
-		EXTERN 31
-		EXTERN 32
+		#assman moded to remove the init messages
+		#EXTERN 31
+		#EXTERN 32
 		REENTER
 	END
 
