@@ -2,7 +2,7 @@
 
 rem set here the game name (used in filenames)
 
-SET game=game
+SET game=firulitoycalcetos
 
 echo ------------------------------------------------------------------------------
 echo    BUILDING %game%
@@ -32,12 +32,13 @@ rem that file to the script folder.
 
 rem the "TwoTS" parameter is to force 16 tiles maps for games which use two
 rem tilesets. Check on whatsnew.txt for directions.
+rem SET THE SIZE OF THE MAP HERE
 
-..\utils\map2bin.exe ..\map\mapa.map 15 2 99 ..\bin\map.bin ..\bin\bolts.bin twots
+..\utils\map2bin.exe ..\map\mapa.map 5 6 99 ..\bin\map.bin ..\bin\bolts.bin twots
 move ..\bin\map.bin.spt ..\script
 
 echo ### MAKING ENEMS ###
-..\utils\ene2bin.exe 15 2 1 ..\enems\enems.ene ..\bin\enems.bin ..\bin\hotspots.bin
+..\utils\ene2bin.exe 5 6 1 ..\enems\enems.ene ..\bin\enems.bin ..\bin\hotspots.bin
 
 echo ### MAKING TILESET ###
 ..\utils\ts2bin.exe ..\gfx\font.png ..\gfx\work.png ..\bin\ts.bin forcezero
@@ -77,9 +78,9 @@ rem many chars per line. Word wrapping is automatic.
 
 echo ### MAKING TEXTS ###
 cd ..\texts
-..\utils\textstuffer2.exe texts.bin textfile=texts.txt mode=simple wordwrap=24 
+..\utils\textstuffer2.exe texts.bin textfile=texts.txt mode=simple wordwrap=24 ramiro=30
 copy texts.bin ..\bin\texts.bin
-..\utils\textstuffer2.exe texts-eng.bin textfile=texts-eng.txt mode=simple wordwrap=24 
+..\utils\textstuffer2.exe texts-eng.bin textfile=texts-eng.txt mode=simple wordwrap=24 ramiro=30
 copy texts-eng.bin ..\bin\texts-eng.bin
 
 rem echo ### MAKING PORTRAITS ####

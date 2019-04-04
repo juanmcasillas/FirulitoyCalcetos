@@ -136,6 +136,7 @@ unsigned char enoffs;
 unsigned char half_life = 0;
 
 // Player
+
 int p_x, p_y;
 #if defined (PHANTOMAS_ENGINE)
 char p_vx, p_vy, ptgmx, ptgmy;
